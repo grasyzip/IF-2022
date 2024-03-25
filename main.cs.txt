@@ -1,0 +1,62 @@
+using System;
+/*using System.Collections;
+using System.Collections.Generic;*/
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Prodto prodto1 = new Prodto("Feijão", 17.80, 2);
+        Prodto prodto2 = new Prodto("Arroz", 9.70, 3);
+
+        Pedido pedido = new Pedido();
+        pedido.AddItem(prodto1, 2);
+        pedido.AddItem(prodto2, 3);
+
+        Console.WriteLine("Total do pedido: " + pedido.Total);
+        Console.WriteLine("-------------------------");
+
+        Console.WriteLine("Como você deseja pagar?");
+        Console.WriteLine("1 - Cartão.");
+        Console.WriteLine("Você tem R$70 no cartão.");
+        Console.WriteLine("2 - Cheque.");
+        Console.WriteLine("Você tem R$100 no cheque.");
+        Console.WriteLine("3 - Dinheiro.");
+        Console.WriteLine("Você tem R$60 em dinheiro.");
+
+        string Respost = Console.ReadLine();
+        switch (Respost)
+        {
+            case "1":
+
+                Carto carto = new Carto();
+                carto.Valr = 70;
+                Console.WriteLine("Pagando com cartão");
+
+
+                pedido.Pagr(carto);
+
+
+                break;
+
+            case "2":
+
+                Cheque cheque = new Cheque();
+                cheque.Valr = 100;
+                Console.WriteLine("Pagando com cheque");
+
+                pedido.Pagr(cheque);
+
+                break;
+
+
+            case "3":
+                Dineiro dineiro = new Dineiro();
+                dineiro.Valr = 60;
+                Console.WriteLine("Pagamento em Dinheiro");
+                pedido.Pagr(dineiro);
+
+                break;
+        }
+    }
+}
