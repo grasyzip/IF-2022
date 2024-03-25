@@ -1,0 +1,80 @@
+using System;
+
+public class Pessoa
+{
+
+    public string Nome { get; set; }
+    public string NoArt { get; set; }
+    public int Dia { get; set; }
+    public int Mes { get; set; }
+    public int Ano { get; set; }
+    private int Idade { get; set; }
+    public Univer NoUniver;
+
+    public Pessoa() { }
+
+    public Pessoa(string Nome, string NoArt, int Dia, int Mes, int Ano, Univer Uni)
+    {
+        this.Dia = Dia;
+        this.Mes = Mes;
+        this.Ano = Ano;
+        this.Nome = Nome;
+        this.NoArt = NoArt;
+        this.NoUniver = Uni;
+
+    }
+
+    public Pessoa(string Nome, string NoArt, int Dia, int Mes, int Ano, int dia, int mes, int ano)
+    {
+      this.Dia = Dia;
+        this.Mes = Mes;
+        this.Ano = Ano;
+        this.Nome = Nome;
+        this.NoArt= NoArt;
+        CalculIda(dia, mes, ano );
+    }
+
+  public Pessoa(string Nome, string NoArt, int Dia, int Mes, int Ano, int dia, int mes, int ano, Univer Uni)
+    {
+       this.Dia = Dia;
+        this.Mes = Mes;
+        this.Ano = Ano;
+        this.Nome = Nome;
+        this.NoArt= NoArt;
+        CalculIda(dia, mes, ano );
+        this.NoUniver = Uni;
+    }
+
+      //Calculador de idade e informador de idade
+    public void CalculIda(int dia, int mes, int ano)
+    {
+        //this.anoH = Ano;
+        this.Idade = ano - this.Ano;
+    }
+
+    public int InfoIda()
+    {
+        return this.Idade;
+    }
+
+    //informador de nome
+    public string InfoNome()
+    {
+        return Nome;
+    }
+
+    //ajustar
+    public void AjusDNasci(int Dia, int Mes, int Ano)
+    {
+        this.Dia = Dia;
+        this.Mes = Mes;
+        this.Ano = Ano;
+    }
+
+
+    public void Dados()
+    {
+        Console.WriteLine(this.Nome + " estudou em " + this.NoUniver.InfoUni());
+    }
+
+}

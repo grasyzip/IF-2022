@@ -1,0 +1,19 @@
+using System;
+
+public class Univer : Pessoa
+{
+    public string Uni { get; set; }
+
+    public Univer() { }
+
+    public Univer(string nome)
+    {
+        this.Uni = nome;
+    }
+
+    public string InfoUni()
+    {
+        return this.Uni;
+    }
+
+}

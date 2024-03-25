@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Univer u = new Univer("Global Cyber Universidade");
+        Univer uu = new Univer("Universidade Konkuk");
+        Pessoa a = new Pessoa("Jeon Jungkoook", "Jungkook", 01, 09, 1997, 01, 09, 2022, u);
+        Pessoa b = new Pessoa("Park Jimin", "Jimin", 13, 10, 1995,01, 09, 2022, u);
+        Pessoa c = new Pessoa("Kim Seok-Jin", "Jin", 04, 12, 1992,01, 09, 2022, uu);   
+        Pessoa d = new Pessoa("Kim Namjoon", "RM", 12, 09, 1994,01, 09, 2022, u);
+        Pessoa e = new Pessoa("Min Yoongi", "Suga", 09, 03, 1993,01, 09, 2022, u);
+        Pessoa f = new Pessoa("Jung Hoseok", "J-Hope", 18, 02, 1994,01, 09, 2022, u);
+        Pessoa g = new Pessoa("Kim Taehyung", "V", 30, 12, 1995,01, 09, 2022, u);
+
+        Console.WriteLine(a.InfoNome() + " tem idade " + a.InfoIda());
+        a.Dados();
+        Console.WriteLine(b.InfoNome() + " tem idade " + b.InfoIda());
+        b.Dados();
+        Console.WriteLine(c.InfoNome() + " tem idade " + c.InfoIda());
+        c.Dados();
+        Console.WriteLine(d.InfoNome() + " tem idade " + d.InfoIda());
+        d.Dados();
+        Console.WriteLine(e.InfoNome() + " tem idade " + e.InfoIda());
+        e.Dados();
+        Console.WriteLine(f.InfoNome() + " tem idade " + f.InfoIda());
+        f.Dados();
+        Console.WriteLine(g.InfoNome() + " tem idade " + g.InfoIda());
+        g.Dados();
+
+    }
+}
