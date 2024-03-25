@@ -1,0 +1,18 @@
+using System;
+class Program
+{
+
+    static void Main(string[] args)
+    {
+
+        {
+            Funcionarios f1 = new Funcionarios("Funcionario #1", "001");
+            Funcionarios f2 = new Funcionarios("Funcionario #2", "002");
+            Funcionarios f3 = new Funcionarios("Funcionario #3", "003");
+
+            f1.ExibirDadosFuncionario();
+            f2.ExibirDadosFuncionario();
+            f3.ExibirDadosFuncionario();
+        }
+    }
+}
