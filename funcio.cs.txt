@@ -1,0 +1,53 @@
+using System;
+
+public class Funcio
+{
+    private string Nome;
+    private string Cpf;
+    private int Senha;
+    private double Salario;
+    public bool chksenha;
+    public int chksenha2;
+
+    public Funcio() { }
+
+    public void pegarvalores(){
+      Console.WriteLine("Digite seu nome:");
+      Nome = Console.ReadLine();
+      Console.WriteLine("Digite o Cpf:");
+      Cpf = Console.ReadLine();
+      Console.WriteLine("Digite a Senha:");
+      chksenha2 = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Digite seu salário:");
+      Salario = Double.Parse(Console.ReadLine());
+
+      Senha = 345;
+
+      if(Senha == chksenha2){
+
+        chksenha = true;
+        
+      }else{
+
+        chksenha = false;
+      }
+    }
+
+    public void exibir(){
+      if(chksenha == true){
+
+      Console.WriteLine("Seu nome é: "+ Nome);
+
+      Console.WriteLine("Seu CPF é: "+ Cpf);
+
+      Console.WriteLine("Seu Salario é: "+ Salario);
+
+      Console.WriteLine("Sua Senha está correta.");
+    }
+      else{
+
+      Console.WriteLine("Senha Incorreta.");
+  
+      }
+    }
+}
